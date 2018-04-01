@@ -22,8 +22,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button mButtonPlus;
 
-    private  int Number1;
-    private  int Number2;
+    private Button mButtonEqual;
+
+    private String tempnumber;
+    private String temp;
+    private long Number1;
+    private long Number2;
+    private long total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonPlus = (Button) findViewById(R.id.buttonPlus);
 
+        mButtonPlus = (Button) findViewById(R.id.buttonEqual);
+
 
         mButtonOne.setOnClickListener(this);
         mButtonTwo.setOnClickListener(this);
@@ -57,18 +64,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonPlus.setOnClickListener(this);
 
+        mButtonEqual.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
         if(view instanceof Button) {
-            if ((Button)view == mButtonPlus)
+            if ((Button)view == mButtonEqual)
             {
-
-                Number1 = Integer.parseInt((String) mScreen.getText());
+                temp = (String) mScreen.getText();
+                if (temp.length() == 0){
+                    return;
+                }
+                if (temp.contains("+")){
+                    String[] numbers = temp.split("+");
+                    mScreen.setText(Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]));
+                    return;
             }
-            String temp = (String) mScreen.getText();
+            }
+
             mScreen.setText(temp.concat((String)((Button)view).getText()));
         }
     }
