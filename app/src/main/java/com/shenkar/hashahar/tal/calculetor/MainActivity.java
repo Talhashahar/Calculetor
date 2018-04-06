@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButtonEqual = (Button) findViewById(R.id.buttonEqual);
         mButtonClear = (Button) findViewById(R.id.buttonClear);
 
+
         mButtonOne.setOnClickListener(this);
         mButtonTwo.setOnClickListener(this);
         mButtonThree.setOnClickListener(this);
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mButtonEqual.setOnClickListener(this);
         mButtonClear.setOnClickListener(this);
+
 
     }
 

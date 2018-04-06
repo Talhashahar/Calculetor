@@ -158,13 +158,16 @@
             android:layout_height="wrap_content"
             android:text="="
             tools:layout_editor_absoluteX="40dp"
+
             tools:layout_editor_absoluteY="300dp" />
 
         <Button
-            android:id="@+id/buttonDiv"
+            android:id="@+id/buttonEqual"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
+
             android:text="/"
+
             tools:layout_editor_absoluteX="144dp"
             tools:layout_editor_absoluteY="300dp" />
 
@@ -173,8 +176,10 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="Clear"
+
             tools:layout_editor_absoluteX="240dp"
             tools:layout_editor_absoluteY="300dp" />
+
     </LinearLayout>
 
 
